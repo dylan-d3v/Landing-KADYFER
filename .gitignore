@@ -1,0 +1,49 @@
+# Recursos provisionales de galería
+# Quitar esta regla cuando existan imágenes finales autorizadas para producción.
+assets/gallery/*
+!assets/gallery/.gitkeep
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Dependencias y salidas de herramientas
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+
+# Reportes y artefactos de pruebas
+lighthouse-*.json
+*.lighthouse.json
+playwright-report/
+test-results/
+screenshots/
+*.trace.zip
+
+# Registros y archivos temporales
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Configuración local de editores
+.vscode/
+.idea/
+*.code-workspace
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Servidores y herramientas locales
+.python-version
+__pycache__/
+*.py[cod]
+
