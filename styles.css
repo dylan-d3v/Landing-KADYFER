@@ -636,6 +636,21 @@ h3 {
   letter-spacing: 0.1em;
 }
 
+.catalog-list a {
+  width: fit-content;
+  background-image: linear-gradient(var(--gold-dark), var(--gold-dark));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size var(--transition), color var(--transition);
+}
+
+.catalog-list a:hover,
+.catalog-list a:focus-visible {
+  color: var(--gold-dark);
+  background-size: 100% 1px;
+}
+
 .process-intro > p:last-child,
 .faq-intro > p:last-child {
   max-width: 36rem;
@@ -898,6 +913,22 @@ details[open] .faq-icon::after {
 }
 
 @media (max-width: 799px) {
+  .no-js .header-inner {
+    flex-wrap: wrap;
+    padding-block: 0.75rem;
+  }
+
+  .no-js .site-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .no-js .hero {
+    padding-top: 25rem;
+  }
+
   .js .menu-toggle {
     display: inline-flex;
   }
@@ -987,6 +1018,20 @@ details[open] .faq-icon::after {
 }
 
 @media (min-width: 800px) {
+  .no-js .header-inner {
+    flex-wrap: nowrap;
+    padding-block: 0;
+  }
+
+  .no-js .site-nav {
+    width: auto;
+    display: flex;
+  }
+
+  .no-js .hero {
+    padding-top: 6.5rem;
+  }
+
   .menu-toggle {
     display: none;
   }

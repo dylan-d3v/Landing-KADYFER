@@ -127,6 +127,7 @@ const configureFavicon = () => {
 
   const favicon = document.querySelector('link[rel="icon"]');
   if (!favicon) return;
+  if (favicon.getAttribute("href") !== "data:,") return;
   favicon.type = "image/png";
   favicon.href = faviconPath;
 };

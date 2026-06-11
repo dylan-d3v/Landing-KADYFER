@@ -1,0 +1,321 @@
+.service-page {
+  overflow-wrap: anywhere;
+}
+
+.service-hero {
+  min-height: min(900px, 94svh);
+  padding-block: 6rem 3rem;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(198, 161, 91, 0.14), transparent 30rem),
+    var(--black);
+}
+
+.breadcrumb {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  padding-top: 1rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  color: var(--gold-dark);
+  content: "/";
+}
+
+.breadcrumb a {
+  color: var(--warm-white);
+  text-underline-offset: 0.25rem;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+
+.service-hero-grid,
+.service-overview-grid,
+.service-process-grid,
+.considerations-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2.5rem, 7vw, 5rem);
+}
+
+.service-hero-grid {
+  align-items: center;
+}
+
+.service-hero-copy h1 {
+  max-width: 14ch;
+}
+
+.service-hero-summary {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  color: #d2ccc1;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.service-hero-media {
+  position: relative;
+  margin: 0 0 0 1.25rem;
+}
+
+.service-hero-media::before {
+  position: absolute;
+  inset: -1rem 1rem 1rem -1rem;
+  z-index: 0;
+  border: 1px solid var(--line-dark);
+  content: "";
+}
+
+.service-hero-image {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-hero-media figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 3rem 1rem 1rem;
+  background: linear-gradient(transparent, rgba(11, 10, 9, 0.9));
+  color: var(--warm-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.service-overview-grid {
+  align-items: start;
+}
+
+.service-overview .lead {
+  max-width: 42rem;
+}
+
+.orientation-panel {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--line-light);
+  background: var(--warm-white);
+}
+
+.orientation-panel h3 {
+  max-width: 18ch;
+}
+
+.orientation-panel p:last-child {
+  margin-bottom: 0;
+  color: #5f564d;
+}
+
+.service-process-grid > div > p:last-child {
+  max-width: 34rem;
+  color: #5f564d;
+}
+
+.service-process-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-light);
+  list-style: none;
+}
+
+.service-process-list li {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.service-process-list p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.4;
+}
+
+.service-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin-bottom: min(var(--section-space), 4.5rem);
+}
+
+.application-grid,
+.related-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border-top: 1px solid var(--line-dark);
+}
+
+.application-area {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.application-area p {
+  max-width: 38rem;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.service-mid-cta {
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.service-mid-cta-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.service-mid-cta-inner p {
+  max-width: 30ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 4vw, 2.7rem);
+  line-height: 1.2;
+}
+
+.service-mid-cta-inner .button {
+  width: fit-content;
+}
+
+.consideration-block {
+  max-width: 45rem;
+}
+
+.consideration-block h2 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+}
+
+.consideration-block > p:last-child {
+  color: #5f564d;
+}
+
+.related-service {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line-light);
+  transition: color var(--transition), padding var(--transition);
+}
+
+.related-service strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.related-service-action {
+  width: fit-content;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--gold-dark);
+  color: var(--gold-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.related-service:hover {
+  color: var(--gold-dark);
+}
+
+@media (max-width: 799px) {
+  .no-js .service-hero {
+    padding-top: 25rem;
+  }
+
+  .service-hero .button,
+  .service-mid-cta .button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .service-hero {
+    padding-block: 7rem 4.5rem;
+  }
+
+  .service-hero-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+  }
+
+  .service-hero-image {
+    height: min(66svh, 45rem);
+    aspect-ratio: auto;
+  }
+
+  .service-overview-grid,
+  .service-process-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(19rem, 0.85fr);
+  }
+
+  .considerations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-section-heading {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .application-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .application-area {
+    min-height: 20rem;
+    padding: 2.5rem;
+    border-right: 1px solid var(--line-dark);
+  }
+
+  .application-area:last-child {
+    border-right: 0;
+  }
+
+  .service-mid-cta-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .related-service {
+    min-height: 15rem;
+    padding: 2.5rem;
+    border-right: 1px solid var(--line-light);
+  }
+
+  .related-service:last-child {
+    border-right: 0;
+  }
+}
